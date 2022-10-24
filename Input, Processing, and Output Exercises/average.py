@@ -17,4 +17,6 @@ for i in range(values_total):
     value = float(input("Enter the value:"))
     values_list.append(value)
 
-print(average(values_list))
+mean = average(values_list)
+
+print(f"The average is {mean}")
