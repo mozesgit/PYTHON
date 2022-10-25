@@ -7,19 +7,16 @@ The recipe produces 48 cookies with this amount of the ingredients. Write a prog
 asks the user how many cookies he or she wants to make, and then displays the number of
 cups of each ingredient needed for the specified number of cookies.
 '''
-# 1.5 cups of sugar produces 16 cookies out of 48 cookies
-# 1 cup of butter produces 8 cookies out of 48 cookies
-# 2.75 cups of flour produces 24 cookies out of 48 cookies 
-# Summation of 1.5,1,2.75
-TOTAL_RATIO = 6
+
 # Getting the number of cookies
 cookies_number = int(input("Enter the number of cookies:"))
 
 # calculations
-cups_of_sugar = (16 / cookies_number) * 6
-cups_of_butter = (8 / cookies_number) * 6
-cups_of_flour = (24 / cookies_number) * 6
+sugar_adjustment = (1.5/48) * cookies_number
+butter_adjustment = (1/48) * cookies_number
+flour_adjustment = (2.75/48) * cookies_number
 
-print("The cups of sugar:",format(cups_of_sugar,'.1f'))
-print("The cups of butter:",format(cups_of_butter,'.1f'))
-print("The cups of flour:",format(cups_of_flour,'.1f'))
+
+print("cups of sugar will be: " + format(sugar_adjustment,'.2f')  + " cups")
+print("cups of butter will be: " + format(butter_adjustment,'.2f')  + " cups")
+print("cups of flour wil be: " + format(flour_adjustment,'.2f')  + " cups")
